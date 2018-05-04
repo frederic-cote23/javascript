@@ -1,0 +1,250 @@
+<script type="text/javascript" src="https://static.cloud.coveo.com/coveo.analytics.js/coveoua.js"></script>
+<!-- START INITIATING RECOMMENDATION -->
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+    Coveo.SearchEndpoint.configureCloudV2Endpoint('fcotetrainingorg','xx367dddc5-086b-45d1-8083-d417116b6496');
+    Coveo.initRecommendation(document.getElementById('recommendation'), document.getElementById('search'));
+    })
+</script>
+<!-- END INITIATING RECOMMENDATION -->
+
+
+<div id="search" class="CoveoSearchInterface" data-enable-history="true" data-design="new">
+    <div class="CoveoAnalytics">
+    </div>
+    <div class="coveo-tab-section"><a class="CoveoTab" data-id="ALL" data-caption="All">
+      </a>
+  <div class="CoveoTab" data-id="App Store" data-caption="App Store" data-expression="@source=&quot;App Store&quot;">
+      </div>
+  <div class="CoveoTab" data-id="Demo" data-caption="Demo" data-expression="@source=&quot;App Store&quot;"></div>
+  <div class="CoveoTab" data-id="Games" data-caption="Games" data-expression="@appcategory=&quot;Games&quot;"></div>
+  <div class="CoveoTab" data-id="Sports" data-caption="Sports" data-expression="@appcategory=&quot;Sports&quot;"></div>
+  <div class="CoveoTab" data-id="Books" data-caption="Books" data-expression="@appcategory=&quot;Books&quot;"></div>
+  <div class="CoveoTab" data-id="Youtube" data-caption="Youtube" data-expression="@source = &quot;Apple Youtube Demo&quot;"></div></div>
+  
+  <select id="visitorPersona" onchange="processVisitorPersona()">
+    <option value="None">None
+    </option><option value="Hardcore Gamer">Hardcore Gamer
+    </option><option value="Casual Gamer">Casual Gamer
+    </option><option value="Epicurist">Epicurist
+    </option><option value="Productivity Hacker">Productivity Hacker
+    </option><option value="Musicophile">Musicophile
+    </option><option value="Health Guru">Health Guru
+    </option><option value="Student">Student
+  </option></select>
+  
+  <select id="visitorAppType" onchange="processAppType()">
+    <option value="None">None
+    </option><option value="Free">Free
+    </option><option value="Paid">Paid
+  </option></select>
+  
+  <p id="displayPersona"></p>
+  <p id="displayAppType"></p>
+  
+    <div class="coveo-search-section">
+      <div class="CoveoSettings" data-include-in-menu=".CoveoShareQuery,.CoveoPreferencesPanel">
+      </div>
+      <div class="CoveoSearchbox" data-enable-omnibox="true" data-enable-reveal-query-suggest-addon="true">
+      </div>
+    </div>
+    <div class="coveo-main-section">
+      <div class="coveo-facet-column"><div class="CoveoFacet" data-title="App Category" data-field="@appcategory" data-tab="App Store, Demo">
+        </div>
+  <div class="CoveoFacet" data-title="iTunes Age Requirements" data-field="@appcontentrating" data-tab="App Store, Demo, Games, Sports, Books"></div>
+  <div class="CoveoFacet" data-title="App Languages" data-field="@applanguages" data-tab="App Store, Games, Sports, Books, Demo" data-is-multi-value-field="true" data-use-and="true"></div>
+  
+  
+  <div class="CoveoFacetSlider" data-title="Minimum Version of iOS required" data-field="@appminimumiosversion" data-range-slider="true" data-rounded="1" data-tab="Demo, App Store, Games, Sports, Books">
+        </div>
+  
+  <div class="CoveoFacet" data-title="Source" data-field="@source" data-tab="ALL">
+        </div>
+  <div class="CoveoFacet" data-title="FileType" data-field="@filetype" data-tab="ALL">
+        </div></div>
+      <div class="coveo-results-column">
+        <div class="CoveoShareQuery">
+        </div>
+        <div class="CoveoPreferencesPanel">
+          <div class="CoveoResultsPreferences">
+          </div>
+          <div class="CoveoResultsFiltersPreferences">
+          </div>
+        </div>
+        <div class="CoveoTriggers">
+        </div>
+        <div class="CoveoBreadcrumb">
+        </div>
+        <div class="CoveoSearchAlerts">
+        </div>
+        <div class="coveo-results-header">
+          <div class="coveo-summary-section">
+            <span class="CoveoQuerySummary">
+            </span>
+            <span class="CoveoQueryDuration">
+            </span>
+          </div>
+          <div class="coveo-sort-section"><span class="CoveoSort" data-sort-criteria="relevancy" data-caption="Relevance">
+            </span>
+  
+  
+  </div>
+        </div>
+        <div class="CoveoHiddenQuery">
+        </div>
+        <div class="CoveoDidYouMean">
+        </div>
+        <div class="CoveoErrorReport" data-pop-up="false">
+        </div>
+        
+        <!-- START INITIATING RECOMMENDATION -->   
+        <div id="recommendation" class="CoveoRecommendation"
+            data-design="new"
+            data-results-per-page="5" 
+            data-hide-if-no-results="false"
+            data-main-search-interface="search"
+            data-pipeline="Recommendation">
+      
+            <div class="coveo-recommendation-header">
+                <div class="coveo-recommendation-title">Recommendations</div>
+            </div>
+            
+            <div class="coveo-recommendation-body">
+                <div class="CoveoResultList">
+                </div>
+            </div>
+    
+        </div>
+        <!-- END INITIATING RECOMMENDATION -->
+        
+
+        <div class="CoveoResultList" data-wait-animation="fade" data-auto-select-fields-to-include="true"><script type="text/html" data-condition="raw.connectortype &amp;&amp; raw.connectortype.toLowerCase() == &quot;youtubecrawler&quot;" class="result-template" id="YouTube"><div class="coveo-result-frame">  <div class="coveo-result-row">    <div class="coveo-result-cell" style="width:220px; padding-top:7px">      <span class="CoveoYouTubeThumbnail">      </span>    </div>    <div class="coveo-result-cell" style="">      <div class="coveo-result-row">        <div class="coveo-result-cell" style="font-size:18px">          <a class="CoveoResultLink">          </a>        </div>        <div class="coveo-result-cell" style="text-align:right; width:120px;font-size:12px">          <span class="CoveoFieldValue" data-field="@date" data-helper="dateTime">          </span>        </div>      </div>      <div class="coveo-result-row">        <div class="coveo-result-cell" style="padding-top:10px;">          <div class="CoveoExcerpt">          </div>        </div>      </div>      <div class="coveo-result-row">        <div class="coveo-result-cell" style="padding-top:10px;font-size:12px">          <span class="CoveoFieldValue" data-field="@ytvideoduration" data-helper="timeSpan" data-helper-options-is-milliseconds="false">          </span>          <span class="CoveoText" data-value="•">          </span>          <span class="CoveoFieldValue" data-field="@ytviewcount">          </span>          <span class="CoveoText" data-value="views">          </span>        </div>      </div>    </div>  </div></div></script>
+          <script id="App Store" class="result-template" type="text/html"><div class="coveo-result-frame">
+    <div class="coveo-result-row">
+      <div class="coveo-result-cell" style="width:85px;text-align:center;padding-top:7px;"><span class="CoveoFieldValue" data-field="@appimage" data-html-value="true" data-helper="image" data-helper-options-alt="App Logo" data-helper-options-height="90" data-helper-options-width="90"></span>
+  <div class="CoveoQuickview">
+            </div>
+            </div>
+      <div class="coveo-result-cell" style="padding-left:15px;">
+        <div class="coveo-result-row">
+          <div class="coveo-result-cell" style="font-size:18px;">
+            <a class="CoveoResultLink">
+            </a>
+            </div>
+          <div class="coveo-result-cell" style="width:120px; text-align:right; font-size:12px">
+            <span class="CoveoFieldValue" data-field="@itmsdate" data-helper="dateTime" data-html-value="false">
+            </span>
+            </div>
+            </div>
+        <div class="coveo-result-row">
+          <div class="coveo-result-cell">
+            <span class="CoveoExcerpt">
+            </span>
+            </div>
+            </div>
+            </div>
+            </div>
+    <div class="coveo-result-row">
+      <div class="coveo-result-cell" style="width:85px;text-align:center">
+            </div>
+      <div class="coveo-result-cell" style="font-size:13px;padding-left: 15px;">
+        <table class="CoveoFieldTable"><tr data-caption="Category" data-field="@appcategory"></tr><tr data-caption="Genres" data-field="@appgenres" data-split-values="true"></tr><tr data-caption="Seller" data-field="@appseller"></tr><tr data-caption="Size" data-field="@appsize"></tr><tr data-caption="App Store User Rating" data-field="@appscore"></tr><tr data-caption="Price" data-field="@appprice" data-helper="currency" data-helper-options-decimals="2" data-helper-options-symbol="$"></tr></table>
+            </div>
+            </div>
+            </div>
+          </script>
+        </div>
+        <div class="CoveoPager">
+        </div>
+        <div class="CoveoLogo">
+        </div>
+      </div>
+      [[recommendation]]
+    </div>
+  <script class="CoveoPipelineContext" type="text/x-context" data-tab="Demo">&#123;&#34;Key&#34;&#58;&#34;value&#34;&#125;</script><script class="CoveoPipelineContext" type="text/x-context">{}</script><script class="CoveoEndpoint" type="text/javascript">Coveo.SearchEndpoint.endpoints["My Endpoint"] = new Coveo.SearchEndpoint({"restUri":"http://server:8080/rest/search"})</script><script type="text/javascript">String.toLocaleString({});</script></div>
+  <script>
+    function changeBackground() {
+     document.body.style.background = ('blue');
+  }
+  </script>
+
+  <script>
+  
+    var context = {"persona": "None", "AppType": "None"};
+    var root = Coveo.$$(document).find("#search");
+    Coveo.$$(root).on("buildingQuery", function(e, args) { args.queryBuilder.addContext(context); });
+    
+    //CUSTOM CLICK DIMENSIONS
+    Coveo.$$(root).on('changeAnalyticsCustomData', function(e, args) {
+        args.metaObject.appCategory = event.detail.resultData.raw.appcategory;
+        args.metaObject.appPrice = event.detail.resultData.raw.appprice;
+        args.metaObject.appScore = event.detail.resultData.raw.appscore;
+        args.metaObject.persona = context["persona"];
+        args.metaObject.AppType = context["AppType"];
+
+        if(args.type == 'ClickEvent') { 
+            var meta = args.metaObject; 
+            coveoua("init", 'xx367dddc5-086b-45d1-8083-d417116b6496');
+            coveoua('send','pageview',{ 
+                contentIdKey: meta.contentIDKey, 
+                contentIdValue: meta.contentIDValue,
+                context_AppType: context["AppType"],
+                context_persona: context["persona"]
+            }); 
+        }
+
+    });   
+
+    //ADD context_ to Custom Events
+    Coveo.$$(root).on('changeAnalyticsCustomData', function(e, args) { 
+        args.metaObject.context_persona = context["persona"];
+        args.metaObject.context_AppType = context["AppType"];
+    }); 
+
+    //ADD persona and AppType to Search Event
+    Coveo.$$(root).on('changeAnalyticsCustomData', function(e, args) { 
+        args.metaObject.persona = context["persona"];
+        args.metaObject.AppType = context["AppType"];
+    }); 
+    
+
+    //This function is called each time the visitorPersona <select> is used
+    function processVisitorPersona(){
+        //Selecting the dropdowlist for persona
+        var selectedPersona = document.getElementById("visitorPersona").value
+        
+        //Setting the context
+        context['persona'] = selectedPersona;
+        
+        //Custom Search Event parameters. name -> actionCause
+        var personaCustomSearchEventCause = { name : 'settingPersona', type : '' };
+        
+        //Custom Event parameters
+        var personaCustomEventCause = { name : 'settingPersona', type : 'selectingContext' };
+        
+        Coveo.logCustomEvent(root, personaCustomEventCause, context);
+        Coveo.logSearchEvent(root, personaCustomSearchEventCause);
+        Coveo.executeQuery(root);
+    }
+
+    //This function is called each time the AppType <select> is used
+    function processAppType(){
+        //Selecting the dropdowlist for persona
+        var selectedBuyer= document.getElementById("visitorAppType").value
+        
+        //Setting the context
+        context['AppType'] = selectedBuyer;
+        
+        //Custom Search Event parameters. name -> actionCause
+        var buyerCustomSearchEventCause = { name : 'settingAppType', type : '' };
+        
+        //Custom Event parameters
+        var buyerCustomEventCause = { name : 'settingAppType', type : 'selectingContext' };
+        
+        Coveo.logCustomEvent(root, buyerCustomEventCause, context);
+        Coveo.logSearchEvent(root, buyerCustomSearchEventCause);
+        Coveo.executeQuery(root);
+    }
+    
+  
+  </script>
